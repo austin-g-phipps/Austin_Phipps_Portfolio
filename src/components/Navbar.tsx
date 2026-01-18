@@ -2,7 +2,9 @@ import { cn } from "../lib/utils"
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import GlassSurface from './GlassSurface'
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 
 const navItems = [
     {name: "Home", href: "#hero"},
@@ -43,8 +45,8 @@ export const Navbar = () => {
                 {/* desktop nav */}
                 <div className="hidden md:flex space-x-8">
                     {navItems.map((item, key) => (
-                        <a key={key} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                            <Link to={item.href}>{item.name}</Link>
+                        <a key={key} className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                            <HashLink to={item.href}>{item.name}</HashLink>
                         </a>
                     ))}
                 </div>
