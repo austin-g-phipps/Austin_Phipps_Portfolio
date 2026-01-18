@@ -8,8 +8,6 @@
     "dev": "vite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
