@@ -27,7 +27,7 @@ export const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [])
     return (
-        <div className="fixed w-screen h-screen z-20 transition-all duration-300">
+        <div className="fixed w-full h-screen z-20 transition-all duration-300">
         <GlassSurface 
             width={'90%'}
             borderRadius={50}
