@@ -2,13 +2,14 @@ import { cn } from "../lib/utils"
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import GlassSurface from './GlassSurface'
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 const navItems = [
-    {name: "Home", href: "hero"},
-    {name: "About", href: "about"},
-    {name: "Skills", href: "skills"},
-    {name: "Projects", href: "projects"},
-    {name: "Contact", href: "contact"},
+    {name: "Home", href: "#hero"},
+    {name: "About", href: "#about"},
+    {name: "Skills", href: "#skills"},
+    {name: "Projects", href: "#projects"},
+    {name: "Contact", href: "#contact"},
 ]
 
 export const Navbar = () => {
@@ -43,7 +44,7 @@ export const Navbar = () => {
                 <div className="hidden md:flex space-x-8">
                     {navItems.map((item, key) => (
                         <a key={key} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                            {item.name}
+                            <Link to={item.href}>{item.name}</Link>
                         </a>
                     ))}
                 </div>
