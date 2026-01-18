@@ -36,9 +36,9 @@ export const Navbar = () => {
         >
         <nav className="fixed w-full z-40 transition-all duration-300">
             <div className="container flex items-center justify-between">
-                <a className="text-xl font-bold text-primary flex items-center" href = "#hero">
+                <a className="text-xl font-bold text-primary flex items-center">
                     <span className="relative z-10">
-                        <span className="text-glow text-foreground"> Austin Phipps </span> Portfolio
+                        <HashLink to={"#hero"}><span className="text-glow text-foreground"> Austin Phipps </span> Portfolio</HashLink>
                     </span>
                 </a>
 
@@ -94,11 +94,10 @@ export const Navbar = () => {
                         {navItems.map((item, key) => (
                             <a 
                                 key={key} 
-                                href={item.href} 
                                 className="text-foreground/80 hover:text-primary transition-colors duration-300" 
                                 onClick={() => setIsMenuOpen(false)}
                             >
-                                {item.name}
+                                <HashLink to={item.href}>{item.name}</HashLink>
                             </a>
                         ))}
                     </div>
