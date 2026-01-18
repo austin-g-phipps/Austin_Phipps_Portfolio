@@ -31,7 +31,7 @@ export const Navbar = () => {
         <GlassSurface 
             width={'90%'}
             borderRadius={50}
-            className={cn("mt-4 justify-self-center")}
+            className={cn("mt-4 place-self-center")}
             displace={2.8}
         >
         <nav className="fixed w-full z-40 transition-all duration-300">
