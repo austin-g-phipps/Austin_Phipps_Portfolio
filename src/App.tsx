@@ -10,7 +10,7 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="https://austin-g-phipps.github.io/Austin_Phipps_Portfolio/" element = {<Home />}/>
+        <Route index element = {<Home />}/>
         <Route path="*" element = {<NotFound />}/>
       </Routes>
     </BrowserRouter>
