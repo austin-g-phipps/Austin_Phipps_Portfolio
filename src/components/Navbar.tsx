@@ -27,11 +27,11 @@ export const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [])
     return (
-        <div className="fixed w-full h-screen z-20 transition-all duration-300">
+        <div className="fixed top-0 left-0 w-full h-full flex justify-center z-20 transition-all duration-300">
         <GlassSurface 
             width={'90%'}
             borderRadius={50}
-            className={cn("mt-4 place-self-center")}
+            className={cn("mt-4")}
             displace={2.8}
         >
         <nav className="fixed w-full z-40 transition-all duration-300">
