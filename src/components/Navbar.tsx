@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import GlassSurface from './GlassSurface'
 
 const navItems = [
-    {name: "Home", href: "#hero"},
-    {name: "About", href: "#about"},
-    {name: "Skills", href: "#skills"},
-    {name: "Projects", href: "#projects"},
-    {name: "Contact", href: "#contact"},
+    {name: "Home", href: "hero"},
+    {name: "About", href: "about"},
+    {name: "Skills", href: "skills"},
+    {name: "Projects", href: "projects"},
+    {name: "Contact", href: "contact"},
 ]
 
 export const Navbar = () => {
@@ -35,7 +35,7 @@ export const Navbar = () => {
             <div className="container flex items-center justify-between">
                 <a className="text-xl font-bold text-primary flex items-center" href = "#hero">
                     <span className="relative z-10">
-                        <span className="text-glow text-foreground"> AustinHung </span> Portfolio
+                        <span className="text-glow text-foreground"> Austin Phipps </span> Portfolio
                     </span>
                 </a>
 
