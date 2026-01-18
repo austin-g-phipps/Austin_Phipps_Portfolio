@@ -3,11 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://austin-g-phipps.github.io/Austin_Phipps_Portfolio",
+  "homepage": "https://austin-g-phipps.github.io/Austin_Phipps_Portfolio",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint .",
