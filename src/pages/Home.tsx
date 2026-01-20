@@ -33,46 +33,73 @@ export const Home = () => {
 
         return () => observer.disconnect();
     }, []);
-    return <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+
+    return (
+        <div>
         {/* Theme Toggle */}
         <ThemeToggle />
         {/* Background */}
 
-        <div className="absolute size-full">
+        
             {/* TODO: Change ts to have prettier colors when light mode is enabled */}
             {/* {isSubmitting ? "Sending Airstrike..." : "Send Message"} */}
             { 
                 isDark ? 
-                    <Aurora
-                        colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
-                        blend={0.5}
-                        amplitude={3.0}
-                        speed={0.5}
-                    /> : 
-                    <AuroraBackground>
-                        <div className="bg-background"></div>
-                    </AuroraBackground>
+                <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+                    <div className="absolute size-full">
+                        <Aurora
+                            colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+                            blend={0.5}
+                            amplitude={3.0}
+                            speed={0.5}
+                        />
+                    </div> 
+                        {/* Navbar */}
+                        <Navbar />
+                        {/* Main Content */}
+                        <main>
+                            <HeroSection />
+                            <AboutSection />
+                            {/* <SkillsSection /> */}
+                            <ProjectsSection />
+                            <ContactSection />
+                        </main>
+                        
+
+                        {/* Footer */}
+                        <Footer/>
+                    </div>
+                    : 
+                    <div>
+                        <AuroraBackground>
+                            <Navbar />
+                            <HeroSection />
+                        </AuroraBackground>
+                            
+                            {/* Main Content */}
+                            <main>
+                                <AboutSection />
+                                {/* <SkillsSection /> */}
+                                <ProjectsSection />
+                                <ContactSection />
+                            </main>
+                            
+
+                            {/* Footer */}
+                            <Footer/>
+                    </div>
             }
-            {/* <Aurora
-                colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
-                blend={0.5}
-                amplitude={3.0}
-                speed={0.5}
-            /> */}
-        </div>
-        {/* Navbar */}
-        <Navbar />
-        {/* Main Content */}
-        <main>
-            <HeroSection />
-            <AboutSection />
-            {/* <SkillsSection /> */}
-            <ProjectsSection />
-            <ContactSection />
-        </main>
+        
+         {/* <Navbar />
+         <main>
+             <HeroSection />
+             <AboutSection />
+             <ProjectsSection />
+             <ContactSection />
+         </main>
         
 
-        {/* Footer */}
-        <Footer/>
-    </div>;
+         <Footer/> */}
+        </div>
+    );
 };
