@@ -23,6 +23,10 @@
     --primary-foreground: 213 31% 91%;
 
     --border: 217 33% 20%;
+
+    --wave-start: #3A29FF;
+    --wave-middle: #FF94B4;
+    --wave-end: #FF3232;
   }
 
   .light {
@@ -35,6 +39,10 @@
     --primary-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
+
+    --wave-start: #fbe8ff;
+    --wave-middle: #ffb4cb;
+    --wave-end: #ffe9e9;
   }
 
   * {

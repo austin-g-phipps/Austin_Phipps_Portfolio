@@ -32,7 +32,7 @@ export const ThemeToggle = () => {
     return (
         <button 
         onClick={toggleTheme} 
-        className= "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300 focus:onlin-hidden"
+        className= "fixed max-sm:right-1 max-sm:bottom-5 md:top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300 focus:outline-hidden"
         >
             {/* Below is a javascript react if statement that i think is used because its parsed with html? */}
             {isLightMode ? ( 

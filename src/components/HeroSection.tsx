@@ -2,6 +2,7 @@ import TextType from './TextType';
 import GlassSurface from './GlassSurface'
 import FadeContent from './FadeContent'
 import { ArrowDown } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
 
 export const HeroSection = () => {
     return (
@@ -44,7 +45,7 @@ export const HeroSection = () => {
                                 height={'wrap'}
                                 width={'wrap'}
                                 borderRadius={50}
-                                children={<a href='#projects' className='glass-button'>View My Work</a>}
+                                children={<HashLink to={"#projects"}><a className='glass-button'>View My Work</a></HashLink>}
                                 >
                             </GlassSurface>
                         </div>
