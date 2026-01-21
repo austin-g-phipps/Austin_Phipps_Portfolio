@@ -33,8 +33,8 @@ export const ContactSection = () => {
                     money makes the world go around baby.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div className="space-y-8">
+                <div className="grid grid-cols-1">
+                    <div className="mx-auto space-y-8">
                         <h3 className="text-2xl font-semibold mb-6">
                             Contact Information
                         </h3>
@@ -88,53 +88,6 @@ export const ContactSection = () => {
                                 </HashLink>
                             </div>
                         </div>
-                    </div>
-
-                    <div className="bg-card p-8 rounded-lg shadow-xs">
-                        <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div>
-                                <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
-                                <input 
-                                    type="text" 
-                                    id="name" 
-                                    name="name" 
-                                    required 
-                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary" 
-                                    placeholder="Austin Phipps..." 
-                                />
-
-                                <label htmlFor="email" className="block text-sm font-medium mb-2">Your Email</label>
-                                <input 
-                                    type="email" 
-                                    id="email" 
-                                    name="email"
-                                    required 
-                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary" 
-                                    placeholder="youremail@example.com" 
-                                />
-
-                                <label htmlFor="message" className="block text-sm font-medium mb-2">Your Message</label>
-                                <textarea 
-                                    id="message" 
-                                    name="message"
-                                    required 
-                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none" 
-                                    placeholder="Please leave your message here..." 
-                                />
-                            </div>
-
-                            <button 
-                            type="submit" 
-                            disabled={isSubmitting}
-                            className={cn(
-                                "cool-button w-full flex items-center justify-center gap-2",
-                                
-                            )}>
-                                {isSubmitting ? "Sending Airstrike..." : "Send Message"} <Send size={16}/>
-                            </button>
-                        </form>
                     </div>
                 </div>
             </div>

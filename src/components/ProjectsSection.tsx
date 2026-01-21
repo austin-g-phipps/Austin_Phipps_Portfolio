@@ -1,5 +1,6 @@
 import { ExternalLink, Github } from "lucide-react";
 import { HashLink } from 'react-router-hash-link';
+import GlassSurface from './GlassSurface'
 
 const projects = [
     {
@@ -46,9 +47,18 @@ export const ProjectsSection = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, key) => (
-                        <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
+                        <GlassSurface 
+                        width={"100%"} 
+                        height={"105%"} 
+                        borderRadius={30} 
+                        backgroundOpacity={.05}
+                        displace={1.2}
+                        borderWidth={.03}
+                        className="transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg"
+                        >
+                        <div key={key} className="group rounded-lg overflow-hidden">
                             <div className="h-48 overflow-hidden">
-                                <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
+                                <img src={project.image} alt={project.title} className="w-full h-full object-cover"/>
                             </div>
                             <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
                             <p className="text-muted-foreground text-sm pr-4 pl-4">
@@ -72,6 +82,7 @@ export const ProjectsSection = () => {
                                 </div>
                             </div>
                         </div>
+                        </GlassSurface>
                     ))}
                 </div>
                 <div className="text-center mt-12">

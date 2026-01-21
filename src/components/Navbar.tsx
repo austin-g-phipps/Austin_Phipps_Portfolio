@@ -32,7 +32,9 @@ export const Navbar = () => {
             width={'90%'}
             borderRadius={50}
             className={cn("mt-4")}
-            displace={2.8}
+            backgroundOpacity={.05}
+            displace={1.2}
+            borderWidth={.03}
         >
         <nav className="fixed w-full z-40 transition-all duration-300">
             <div className="container flex items-center justify-between">

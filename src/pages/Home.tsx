@@ -46,7 +46,7 @@ export const Home = () => {
             { 
                 isDark ? 
                 <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-                    <div className="absolute size-full">
+                    <div className="fixed right-0 top-0 size-full">
                         <Aurora
                             colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
                             blend={0.5}
@@ -71,13 +71,14 @@ export const Home = () => {
                     </div>
                     : 
                     <div>
-                        <AuroraBackground>
-                            <Navbar />
-                            <HeroSection />
+                        <AuroraBackground className="fixed right-0 top-0 size-full">
+                            <p></p>
                         </AuroraBackground>
                             
                             {/* Main Content */}
                             <main>
+                                <Navbar />
+                                <HeroSection />
                                 <AboutSection />
                                 {/* <SkillsSection /> */}
                                 <ProjectsSection />
