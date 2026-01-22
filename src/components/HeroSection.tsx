@@ -45,6 +45,10 @@ export const HeroSection = () => {
                                 height={'wrap'}
                                 width={'wrap'}
                                 borderRadius={50}
+                                backgroundOpacity={.05}
+                                displace={1.2}
+                                borderWidth={.03}
+                                className='transition duration-300 hover:bg-primary/10 hover:scale-105'
                                 children={<HashLink to={"#projects"}><a className='glass-button'>View My Work</a></HashLink>}
                                 >
                             </GlassSurface>

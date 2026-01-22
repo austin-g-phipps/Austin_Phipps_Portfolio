@@ -40,9 +40,11 @@ export const ContactSection = () => {
                         </h3>
                         <div className="space-y-6 justify-center">
                             <div className="flex items-start space-x-4">
-                                <div className="p-3 rounded-full bg-primary/10">
-                                    <Mail className="h-6 w-6 text-primary"/>
-                                </div>
+                                <HashLink to={"mailto:hello@gmail.com"}>
+                                    <div className="p-3 rounded-full bg-primary/10 transition duration-300 hover:scale-105">
+                                        <Mail className="h-6 w-6 text-primary"/>
+                                    </div>
+                                </HashLink>
                                 <div>
                                     <HashLink to={"mailto:hello@gmail.com"} className="text-muted-foreground hover:text-primary transition-colors">
                                         <h4 className="font-medium">Email</h4>
@@ -54,9 +56,11 @@ export const ContactSection = () => {
                         
                         <div className="space-y-6 justify-center">
                             <div className="flex items-start space-x-4">
-                                <div className="p-3 rounded-full bg-primary/10">
-                                    <Phone className="h-6 w-6 text-primary"/>
-                                </div>
+                                <HashLink to={"tel:+11234567890"}>
+                                    <div className="p-3 rounded-full bg-primary/10 transition duration-300 hover:scale-105">
+                                            <Phone className="h-6 w-6 text-primary"/>
+                                    </div>
+                                </HashLink>
                                 <div>
                                     <HashLink to={"tel:+11234567890"} className="text-muted-foreground hover:text-primary transition-colors">
                                         <h4 className="font-medium">Phone</h4>
@@ -83,8 +87,8 @@ export const ContactSection = () => {
                         <div className="pt-8">
                             <h4 className="font-medium mb-4">Connect With Me</h4>
                             <div className="flex space-x-4 justify-center">
-                                <HashLink to={"https://www.linkedin.com/in/austin-phipps-557064388/"} target="_blank">
-                                    <Linkedin />
+                                <HashLink to={"https://www.linkedin.com/in/austin-phipps-557064388/"} target="_blank" className="p-3 rounded-full bg-primary/10">
+                                    <Linkedin className="text-primary"/>
                                 </HashLink>
                             </div>
                         </div>

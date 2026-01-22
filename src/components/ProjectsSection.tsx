@@ -85,9 +85,19 @@ export const ProjectsSection = () => {
                         </GlassSurface>
                     ))}
                 </div>
-                <div className="text-center mt-12">
-                    <HashLink to={"https://github.com/austin-g-phipps"} className="glass-button w-fit flex items-center mx-auto gap-2" target="_blank">Check out my GitHub!<ExternalLink size={16}/> </HashLink>
-                </div>
+                    <div className="flex flex-row justify-center text-center">
+                    <GlassSurface 
+                        width={'wrap%'}
+                        height={"wrap"}
+                        borderRadius={50}
+                        backgroundOpacity={.05}
+                        displace={1.2}
+                        borderWidth={.03}
+                        className='mt-12 transition duration-300 hover:bg-primary/10 hover:scale-105'
+                    >
+                        <HashLink to={"https://github.com/austin-g-phipps"} className="glass-button flex flex-row items-center gap-2 hover:text-primary" target="_blank">Check out my GitHub!<ExternalLink size={16}/> </HashLink>
+                    </GlassSurface>
+                    </div>
             </div>
         </section>
     );

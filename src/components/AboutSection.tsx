@@ -1,5 +1,6 @@
 import { Code, HamburgerIcon, User } from "lucide-react";
 import GlassSurface from './GlassSurface'
+import { HashLink } from 'react-router-hash-link';
 
 export const AboutSection = () => {
     return (
@@ -19,12 +20,32 @@ export const AboutSection = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-                            <a href="#contact" className="cool-button">
-                                Get In Touch
-                            </a>
-                            <a href="#contact" className="cool-button">
-                                Second Button
-                            </a>
+                            <GlassSurface 
+                                height={'wrap'}
+                                width={'wrap'}
+                                borderRadius={50}
+                                backgroundOpacity={.05}
+                                displace={1.2}
+                                borderWidth={.03}
+                                className='transition duration-300 hover:bg-primary/10 hover:scale-105'
+                            >
+                                <HashLink to={"#contact"} className="glass-button">
+                                    Get In Touch
+                                </HashLink>
+                            </GlassSurface>
+                            <GlassSurface 
+                                height={'wrap'}
+                                width={'wrap'}
+                                borderRadius={50}
+                                backgroundOpacity={.05}
+                                displace={1.2}
+                                borderWidth={.03}
+                                className='transition duration-300 hover:bg-primary/10 hover:scale-105'
+                            >
+                                <HashLink to={"#contact"} className="glass-button">
+                                    Second Button
+                                </HashLink>
+                            </GlassSurface>
                         </div>
                     </div>
 
