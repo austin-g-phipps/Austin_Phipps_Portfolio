@@ -1,6 +1,6 @@
 import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { HashLink } from "react-router-hash-link";
-import { cn } from "@/lib/utils"; 
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 export const ContactSection = () => {
@@ -25,57 +25,54 @@ export const ContactSection = () => {
                 </h2>
 
                 <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                    I have ideas. so many ideas. an overflowing well of knowledge and
-                    expertise at my fingertips ready to harvested by any able body willing
-                    to reach out to me. will you regret it? maybe. will you be a billionaire
-                    by the time we finish our work together. definitely. will you die a happy
-                    person? no. you will regret the time you spend with me instead of loved ones.
-                    money makes the world go around baby.
+                    Please reach out to me with any job/internship prospects, suggestions for this website 
+                    or any of my other projects, questions in general, or even just to say hi!
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div className="space-y-8">
+                <div className="grid grid-cols-1">
+                    <div className="mx-auto space-y-8">
                         <h3 className="text-2xl font-semibold mb-6">
                             Contact Information
                         </h3>
-                        <div className="space-y-6 justify-center">
-                            <div className="flex items-start space-x-4">
-                                <div className="p-3 rounded-full bg-primary/10">
-                                    <Mail className="h-6 w-6 text-primary"/>
-                                </div>
-                                <div>
-                                    <HashLink to={"mailto:hello@gmail.com"} className="text-muted-foreground hover:text-primary transition-colors">
-                                        <h4 className="font-medium">Email</h4>
-                                        hello@gmail.com
-                                    </HashLink>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="space-y-6 justify-center">
-                            <div className="flex items-start space-x-4">
-                                <div className="p-3 rounded-full bg-primary/10">
-                                    <Phone className="h-6 w-6 text-primary"/>
-                                </div>
-                                <div>
-                                    <HashLink to={"tel:+11234567890"} className="text-muted-foreground hover:text-primary transition-colors">
-                                        <h4 className="font-medium">Phone</h4>
-                                        +1(123)-456-7890
-                                    </HashLink>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div className="space-y-6 justify-center">
-                            <div className="flex items-start space-x-4">
-                                <div className="p-3 rounded-full bg-primary/10">
-                                    <MapPin className="h-6 w-6 text-primary"/>
+                        <div className="grid grid-cols-2">
+                            <div className="space-y-6 justify-center">
+                                <div className="flex items-start space-x-4">
+                                    <div className="grid grid-rows-2">
+                                        <div className="pb-5">
+                                            <div className="p-3 rounded-full bg-primary/10">
+                                                <MapPin className="h-6 w-6 text-primary" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="p-3 rounded-full bg-primary/10">
+                                                <Mail className="h-6 w-6 text-primary" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p className="text-muted-foreground ml-4.5">
-                                        <h4 className="font-medium">Location</h4>
-                                        Monterey, CA
-                                    </p>
+                            </div>
+
+                            <div className="space-y-6 justify-center">
+                                <div className="flex items-start space-x-4">
+                                    <div className="grid grid-rows-2">
+                                        <div className="pb-5">
+                                            <div>
+                                                <HashLink to={"mailto:austin.g.phipps@gmail.com"} className="text-muted-foreground hover:text-primary transition-colors">
+                                                    <h4 className="font-medium">Email</h4>
+                                                    austin.g.phipps@gmail.com
+                                                </HashLink>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <p className="text-muted-foreground ml-4.5">
+                                                    <h4 className="font-medium">Location</h4>
+                                                    Monterey, CA
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +87,7 @@ export const ContactSection = () => {
                         </div>
                     </div>
 
-                    <div className="bg-card p-8 rounded-lg shadow-xs">
+                    {/* <div className="bg-card p-8 rounded-lg shadow-xs">
                         <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
@@ -135,7 +132,7 @@ export const ContactSection = () => {
                                 {isSubmitting ? "Sending Airstrike..." : "Send Message"} <Send size={16}/>
                             </button>
                         </form>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

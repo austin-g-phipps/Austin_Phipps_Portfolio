@@ -1,4 +1,5 @@
 import { Code, HamburgerIcon, User } from "lucide-react";
+import { HashLink } from "react-router-hash-link";
 
 export const AboutSection = () => {
     return (
@@ -8,30 +9,54 @@ export const AboutSection = () => {
                     About <span className="text-primary">Me</span>
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div className="items-center">
                     {/* Left Section of About Me */}
-                    <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold">I am a person with a computer</h3>
+                    <div className="space-y-6 px-15">
+                        <h3 className="text-2xl font-semibold">Software Engineering Student</h3>
 
-                        <p className="text-muted-foreground">
-                            I am reaally good at following this tutorial and go to a super cool school and I haave a million dollars
+                        <p className="text-muted-foreground text-sm md:text-xl text-muted-foreground max-2-2xl">
+                            Hi, I'm Austin Phipps! I'm currently at CSUMB in the computer science department, focusing on Software Engineering.
+                            Although I love most coding, I find the most fulfillment from full-stack development.
+                            I strive to make the projects I develop have a professional design, while remaining
+                            clean and easy to use. 
+                            <br></br>
+                            <br></br>
+                            In the five years I've been learning programming, I have worked mainly in Java. Recently though, I've been
+                            trying to expand my domain with Python, Javascript, SQL, and branches of those languages
+                            (Postgresql, Android Studio, Node.js, TypeScript, etc.). My favorite aspect of learning code in University
+                            has been the rapid expansion of my skillset, and a newfound confidence in my ability to learn
+                            anything short amount of time. This is especially easy with access to resources like LLM models, free YouTube 
+                            tutorials, and online certifications!
+                            <br></br>
+                            <br></br>
+                            While I made this website mainly to show off the skills I've been working on recently, it's
+                            also had the benefit of teaching me about the real-life process of starting a full-stack project and sticking
+                            through with it all the way until the end. I honestly could have (and maybe should have) made this website in a few hours with Claude
+                            like many of peers so I could pump out applications faster, but I found myself enjoying tinkering with React so much that I 
+                            spent much longer than I intended on creating this. 
+                            In developing this project, I've followed the same philosophy I had with my other projects (listed below),
+                            where I largely either lead a group of students in a project (reflected by the GitHub commits) or worked solo on coming up with a project,
+                            followed through with it, made it look professional, and made it easy to use. 
+                            <br></br>
+                            <br></br>
+                            I am looking for internships this 
+                            summer (or whenever to be honest!) to further expand the experience I have in the field. My current works are: Interviewing for a TA position in an internet programming course,
+                            and a couple of personal projects (they will be updated below). Please reach out to me, even if just to say hi!
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-                            <a href="#contact" className="cool-button">
+                            <HashLink to={"#contact"} className="cool-button">
                                 Get In Touch
-                            </a>
-                            <a href="#contact" className="cool-button">
-                                Second Button
-                            </a>
+                            </HashLink>
+                            <HashLink to={"#contact"} className="cool-button">
+                                Resume
+                            </HashLink>
                         </div>
                     </div>
 
                     {/* Right Section of About me ; grid of cards*/}
-                    <div className="grid grid-cols-1 gap-6">
-                        {/* card background, outline, animation */}
+                    {/* <div className="grid grid-cols-1 gap-6">
                         <div className="gradient-border p-6 card-hover">
-                            {/* div for stuff inside card */}
                             <div className="flex items-start gap-4">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <Code className="h-6 w-6 text-primary"/>
@@ -74,7 +99,7 @@ export const AboutSection = () => {
                             </div>
                         </div>
 
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

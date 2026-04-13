@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
+
 @theme {
   --color-border :hsl(var(--border));
   --color-background :hsl(var(--background));
@@ -107,7 +118,7 @@
 }
 
 @utility glass-button {
-  @apply px-6 py-2 rounded-full transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.3)] hover:bg-primary/10;
+  @apply px-6 py-2 rounded-full bg-primary/10 backdrop-blur-md text-primary-foreground font-medium transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)] hover:scale-105 active:scale-95;
 }
 
 #root {
@@ -115,4 +126,15 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+
+/* Hide scrollbar in Chrome, Safari, and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar in IE, Edge, and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

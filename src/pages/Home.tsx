@@ -8,7 +8,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { useEffect, useState } from "react";
 import { AuroraBackground } from "../components/ui/aurora-background";
-// import { SkillsSection } from "@/components/SkillsSection";
+import { SkillsSection } from "@/components/SkillsSection";
 
 
 export const Home = () => {
@@ -36,61 +36,58 @@ export const Home = () => {
 
     return (
         <div>
-        {/* Theme Toggle */}
-        <ThemeToggle />
-        {/* Background */}
+            {/* Theme Toggle */}
+            <ThemeToggle />
+            {/* Background */}
 
-        
-            {/* TODO: Change ts to have prettier colors when light mode is enabled */}
-            {/* {isSubmitting ? "Sending Airstrike..." : "Send Message"} */}
-            { 
-                isDark ? 
-                <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-                    <div className="absolute size-full">
-                        <Aurora
-                            colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
-                            blend={0.5}
-                            amplitude={3.0}
-                            speed={0.5}
-                        />
-                    </div> 
+            {
+                isDark ?
+                    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+                        <div className="fixed right-0 top-0 size-full">
+                            <Aurora
+                                colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+                                blend={0.5}
+                                amplitude={3.0}
+                                speed={0.5}
+                            />
+                        </div>
                         {/* Navbar */}
                         <Navbar />
                         {/* Main Content */}
                         <main>
                             <HeroSection />
+                            <SkillsSection />
                             <AboutSection />
-                            {/* <SkillsSection /> */}
                             <ProjectsSection />
                             <ContactSection />
                         </main>
-                        
+
 
                         {/* Footer */}
-                        <Footer/>
+                        <Footer />
                     </div>
-                    : 
+                    :
                     <div>
                         <AuroraBackground>
                             <Navbar />
                             <HeroSection />
                         </AuroraBackground>
-                            
-                            {/* Main Content */}
-                            <main>
-                                <AboutSection />
-                                {/* <SkillsSection /> */}
-                                <ProjectsSection />
-                                <ContactSection />
-                            </main>
-                            
 
-                            {/* Footer */}
-                            <Footer/>
+                        {/* Main Content */}
+                        <main>
+                            <SkillsSection />
+                            <AboutSection />
+                            <ProjectsSection />
+                            <ContactSection />
+                        </main>
+
+
+                        {/* Footer */}
+                        <Footer />
                     </div>
             }
-        
-         {/* <Navbar />
+
+            {/* <Navbar />
          <main>
              <HeroSection />
              <AboutSection />
