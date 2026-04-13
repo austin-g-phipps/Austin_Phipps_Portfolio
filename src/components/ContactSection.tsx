@@ -80,8 +80,8 @@ export const ContactSection = () => {
                         <div className="pt-8">
                             <h4 className="font-medium mb-4">Connect With Me</h4>
                             <div className="flex space-x-4 justify-center">
-                                <HashLink to={"https://www.linkedin.com/in/austin-phipps-557064388/"} target="_blank">
-                                    <Linkedin />
+                                <HashLink to={"https://www.linkedin.com/in/austin-phipps-557064388/"} target="_blank" className="p-3 rounded-full bg-primary/10">
+                                    <Linkedin className="text-primary"/>
                                 </HashLink>
                             </div>
                         </div>

@@ -70,7 +70,19 @@ export const AboutSection = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="gradient-border p-6 card-hover">
+                        </GlassSurface>
+
+                        <GlassSurface 
+                        width={"100%"} 
+                        height={"100%"} 
+                        borderRadius={30} 
+                        backgroundOpacity={.05}
+                        displace={1.2}
+                        borderWidth={.03}
+                        className="transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg"
+                        >
+                        <div className="mr-auto">
+                        <div className="p-6">
                             <div className="flex items-start gap-4">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <User className="h-6 w-6 text-primary"/>
@@ -84,7 +96,19 @@ export const AboutSection = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="gradient-border p-6 card-hover">
+                        </div>
+                        </GlassSurface>
+
+                        <GlassSurface 
+                        width={"100%"} 
+                        height={"100%"} 
+                        borderRadius={30} 
+                        backgroundOpacity={.05}
+                        displace={1.2}
+                        borderWidth={.03}
+                        className="transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg"
+                        >
+                        <div className="p-6">
                             <div className="flex items-start gap-4">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <HamburgerIcon className="h-6 w-6 text-primary"/>

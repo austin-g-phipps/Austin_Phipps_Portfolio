@@ -68,9 +68,8 @@ export const Home = () => {
                     </div>
                     :
                     <div>
-                        <AuroraBackground>
-                            <Navbar />
-                            <HeroSection />
+                        <AuroraBackground className="fixed right-0 top-0 size-full">
+                            <p></p>
                         </AuroraBackground>
 
                         {/* Main Content */}
